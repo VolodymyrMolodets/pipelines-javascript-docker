@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: volodymyrmolodetspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: volodymyrmolodetspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: volodymyrmolodetspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: volodymyrmolodetspipelinesjavascriptdocker 
+          image: mycontainerregistry14112022.azurecr.io/volodymyrmolodetspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
